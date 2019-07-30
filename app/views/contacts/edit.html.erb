@@ -1,0 +1,7 @@
+<div>
+  <% if current_user.id == @contact.user_id %>
+    <%= render "form" %>
+  <% else %>
+    <h1 style="text-align: center">Not found!</h1>
+  <% end %>
+</div>

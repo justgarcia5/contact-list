@@ -1,0 +1,19 @@
+<div>
+  <h1 class="contacts-title"> Contacts</h1>
+  <div class="contact-div">
+    <table style="width: 80%">
+      <tr class="table-head">
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% @contacts.each do |contact| %>
+        <% if current_user.id == contact.user_id %>
+          <%= render partial: "contact", locals: { contact: contact } %>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
+</div>
